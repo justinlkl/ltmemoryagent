@@ -258,11 +258,12 @@ config = {"configurable": {"user_id": "1", "thread_id": "1"}}
 for chunk in graph.stream({"messages": [("user", "my name is John")]}, config=config):
     pretty_print_stream_chunk(chunk)
 
-for chunk in graph.stream({"messages": [("user", "i love pizza")]}, config=config):
+for chunk in graph.stream({"messages": [("user", "i love blue colour ")]}, config=config):
     pretty_print_stream_chunk(chunk)
 
+config = {"configurable": {"user_id": "1", "thread_id": "1"}}
+
 for chunk in graph.stream(
-    {"messages": [("user", "yes -- pepperoni!")]},
-    config={"configurable": {"user_id": "1", "thread_id": "1"}},
+    {"messages": [("user", "what is the colour i like now? ")]}, config=config
 ):
     pretty_print_stream_chunk(chunk)
